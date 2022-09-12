@@ -10,21 +10,26 @@ const Navbar = () => {
     marginRight: 20,
   };
   return (
-    <div className="navbar">
-      <NavLink
-        className={({ isActive }) => !isActive && "option"}
-        style={({ isActive }) => (isActive ? active : undefined)}
-        to={"/movie"}
-      >
-        <h1>Movie</h1>
-      </NavLink>
-      <NavLink
-        className={({ isActive }) => !isActive && "option"}
-        style={({ isActive }) => (isActive ? active : undefined)}
-        to={"/series"}
-      >
-        <h1>Tv show</h1>
-      </NavLink>
+    <div className="nav">
+      <div className="logo">
+        <h1>IMDB API</h1>
+      </div>
+      <div className="navbar">
+        <NavLink
+          className={({ isActive }) => !isActive && "option"}
+          style={({ isActive }) => (isActive ? active : undefined)}
+          to={"/movies"}
+        >
+          <h1>Movies</h1>
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => !isActive && "option"}
+          style={({ isActive }) => (isActive ? active : undefined)}
+          to={"/shows"}
+        >
+          <h1>Tv Show's</h1>
+        </NavLink>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,20 @@
+.input{
+    width: 500px;
+    margin-top: 40px;
+    height: 40px;
+    background-color: #cccccc;
+    text-align: center;
+    border: 0px solid black;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.input:focus {
+    outline: none;
+    padding-left: 10px;
+    text-align: start;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
