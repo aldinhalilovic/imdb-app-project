@@ -1,0 +1,17 @@
+.navbar{
+    height: 10vh;
+    width: 100%;
+    background-color: #0f292f;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.option{
+    color: #14a098;
+    text-decoration: none;
+    /* margin-left: 20px; */
+    transition: 0.3s;
+    margin-right: 10px;
+    font-size: 12px;
+}

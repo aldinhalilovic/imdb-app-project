@@ -1,0 +1,13 @@
+.footer {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f292f;
+    color: #14a098;
+}
+
+span{
+    margin: 0 10px 0 10px;
+}
