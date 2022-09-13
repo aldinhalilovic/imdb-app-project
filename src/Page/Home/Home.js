@@ -2,25 +2,43 @@ import React, { useEffect, useState } from "react";
 import "./Home.css";
 import axios from "axios";
 
-const ariaLabel = { "aria-label": "description" };
-
 const Home = () => {
   const [title, setTitle] = useState([]);
 
+  const [vrednost, setVrednost] = useState("");
+  const [result, setResult] = useState("");
+
   const getMovies = async () => {
     const res = await axios.get(
-      "https://imdb-api.com/en/API/SearchMovie/k_w7k9gevm/fast"
+      `https://imdb-api.com/en/API/SearchMovie/k_w7k9gevm/${result}`
     );
-    setTitle(res.data.results.splice(0, 3));
+    console.log(res.data);
   };
 
   useEffect(() => {
     getMovies();
-  }, []);
+  }, [result]);
   return (
     <div>
       <h1>HOME PAGE</h1>
-      <input type={"text"} placeholder={"Search..."} className="input"></input>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          setResult(vrednost);
+          setVrednost("");
+        }}
+      >
+        <input
+          type={"text"}
+          placeholder={"Search..."}
+          className="input"
+          value={vrednost}
+          onChange={(e) => {
+            setVrednost(e.target.value);
+          }}
+        ></input>
+      </form>
+
       {title.map((el) => {
         return (
           <div key={el.id}>
