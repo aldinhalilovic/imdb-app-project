@@ -5,6 +5,8 @@ import Footer from "./components/Footer/Footer";
 import Home from "./Page/Home/Home";
 import Movies from "./Page/Movies/Movies";
 import Shows from "./Page/Shows/Shows";
+import MovieCast from "./Page/MovieCast/MovieCast";
+import ShowCast from "./Page/ShowCast/ShowCast";
 
 function App() {
   return (
@@ -14,9 +16,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/movies" element={<Movies />} />
-          {/* <Route path="/movies/:id" element={<MovieCast />} /> */}
+          <Route path="/movies/:id" element={<MovieCast />} />
           <Route path="/shows" element={<Shows />} />
-          {/* <Route path="/shows:id" element={<ShowCast />} /> */}
+          <Route path="/shows/:id" element={<ShowCast />} />
         </Routes>
       </div>
       <Footer />

@@ -7,6 +7,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import Paginacija from "../../components/Paginacija/Paginacija";
+import { useNavigate } from "react-router-dom";
 
 const Movies = () => {
   const [list, setList] = useState([]);
@@ -14,12 +15,14 @@ const Movies = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postPerPage, setPostPerPage] = useState(18);
 
+  const navigate = useNavigate();
+
   const getList = async () => {
     setLoading(true);
     const res = await axios.get(
-      "https://imdb-api.com/en/API/Top250Movies/k_s8b599dl"
+      "https://imdb-api.com/en/API/Top250Movies/k_83567lcb"
     );
-    console.log(res.data);
+    // console.log(res.data);
     setList(res.data.items);
     setLoading(false);
   };
@@ -64,6 +67,7 @@ const Movies = () => {
                   marginTop: "50px",
                   marginBottom: "50px",
                 }}
+                onClick={() => navigate(`/movies/${el.id}`)}
               >
                 <Card
                   sx={{

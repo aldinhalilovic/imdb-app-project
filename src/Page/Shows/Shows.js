@@ -7,6 +7,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import Paginacija from "../../components/Paginacija/Paginacija";
+import { useNavigate } from "react-router-dom";
 
 const Shows = () => {
   const [series, setSeries] = useState([]);
@@ -14,10 +15,12 @@ const Shows = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postPerPage, setPostPerPage] = useState(18);
 
+  const navigate = useNavigate();
+
   const getSeries = async () => {
     setLoading(true);
     const res = await axios.get(
-      "https://imdb-api.com/en/API/Top250TVs/k_s8b599dl"
+      "https://imdb-api.com/en/API/Top250TVs/k_83567lcb"
     );
     setSeries(res.data.items);
     setLoading(false);
@@ -63,6 +66,7 @@ const Shows = () => {
                   marginTop: "50px",
                   marginBottom: "50px",
                 }}
+                onClick={() => navigate(`shows/${el.id}`)}
               >
                 <Card
                   sx={{
