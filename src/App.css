@@ -9,6 +9,6 @@
 
 .body {
   width: 100%;
-  height: 88vh;
+  min-height: 88vh;
   background-color: #501f3a;
 }
