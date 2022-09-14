@@ -17,7 +17,7 @@ const Shows = () => {
   const getSeries = async () => {
     setLoading(true);
     const res = await axios.get(
-      "https://imdb-api.com/en/API/Top250TVs/k_w7k9gevm"
+      "https://imdb-api.com/en/API/Top250TVs/k_s8b599dl"
     );
     setSeries(res.data.items);
     setLoading(false);

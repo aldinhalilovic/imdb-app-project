@@ -17,8 +17,9 @@ const Movies = () => {
   const getList = async () => {
     setLoading(true);
     const res = await axios.get(
-      "https://imdb-api.com/en/API/Top250Movies/k_w7k9gevm"
+      "https://imdb-api.com/en/API/Top250Movies/k_s8b599dl"
     );
+    console.log(res.data);
     setList(res.data.items);
     setLoading(false);
   };

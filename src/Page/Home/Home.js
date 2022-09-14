@@ -17,7 +17,7 @@ const Home = () => {
   const API_KEY_3 = "k_l3ayqof0";
   const getMovies = async () => {
     const res = await axios.get(
-      `https://imdb-api.com/en/API/SearchMovie/${API_KEY}/${result}`
+      `https://imdb-api.com/en/API/SearchMovie/${API_KEY_2}/${result}`
     );
     setTitle(res.data.results.splice(0, 3));
   };
