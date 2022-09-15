@@ -6,11 +6,14 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [title, setTitle] = useState([]);
   const [vrednost, setVrednost] = useState("");
   const [result, setResult] = useState("");
+
+  const navigate = useNavigate();
 
   const API_KEY = "k_w7k9gevm";
   const API_KEY_2 = "k_s8b599dl";
@@ -18,7 +21,7 @@ const Home = () => {
   const API_KEY_4 = "k_83567lcb";
   const getMovies = async () => {
     const res = await axios.get(
-      `https://imdb-api.com/en/API/SearchMovie/${API_KEY_2}/${result}`
+      `https://imdb-api.com/en/API/SearchMovie/${API_KEY}/${result}`
     );
     setTitle(res.data.results.splice(0, 3));
   };
@@ -66,6 +69,7 @@ const Home = () => {
                 justifyContent: "center",
                 alignItems: "center",
               }}
+              onClick={() => navigate(`/search/${el.id}`)}
             >
               <Card
                 sx={{

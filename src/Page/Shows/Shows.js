@@ -20,7 +20,7 @@ const Shows = () => {
   const getSeries = async () => {
     setLoading(true);
     const res = await axios.get(
-      "https://imdb-api.com/en/API/Top250TVs/k_83567lcb"
+      "https://imdb-api.com/en/API/Top250TVs/k_w7k9gevm"
     );
     setSeries(res.data.items);
     setLoading(false);
@@ -66,7 +66,7 @@ const Shows = () => {
                   marginTop: "50px",
                   marginBottom: "50px",
                 }}
-                onClick={() => navigate(`shows/${el.id}`)}
+                onClick={() => navigate(`/shows/${el.id}`)}
               >
                 <Card
                   sx={{

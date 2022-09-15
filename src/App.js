@@ -7,6 +7,7 @@ import Movies from "./Page/Movies/Movies";
 import Shows from "./Page/Shows/Shows";
 import MovieCast from "./Page/MovieCast/MovieCast";
 import ShowCast from "./Page/ShowCast/ShowCast";
+import Search from "./Page/Search/Search";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/movies/:id" element={<MovieCast />} />
           <Route path="/shows" element={<Shows />} />
           <Route path="/shows/:id" element={<ShowCast />} />
+          <Route path="/search/:id" element={<Search />} />
         </Routes>
       </div>
       <Footer />

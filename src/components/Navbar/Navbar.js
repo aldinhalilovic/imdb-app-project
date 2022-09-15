@@ -4,7 +4,7 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const active = {
-    color: "#cccccc",
+    color: "#14a098",
     textDecoration: "none",
     transition: "0.3s",
     marginRight: 20,

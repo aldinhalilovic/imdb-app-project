@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { useNavigate } from "react-router-dom";
+import { style } from "@mui/system";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -9,7 +10,12 @@ const Footer = () => {
       <h1>
         2020 <span>©</span> Aldin Halilovic
       </h1>
-      <button onClick={() => navigate("/")}>HOME</button>
+      <button
+        onClick={() => navigate("/")}
+        style={{ backgroundColor: "#14a098" }}
+      >
+        HOME
+      </button>
     </div>
   );
 };

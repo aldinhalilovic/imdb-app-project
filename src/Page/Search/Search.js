@@ -8,7 +8,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 
-function MovieCast() {
+function Search() {
   const { id } = useParams();
   const [cast, setCast] = useState([]);
 
@@ -22,7 +22,6 @@ function MovieCast() {
   useEffect(() => {
     getCast(id);
   }, [id]);
-  console.log(cast.map((el) => el));
 
   return (
     <div
@@ -80,4 +79,4 @@ function MovieCast() {
   );
 }
 
-export default MovieCast;
+export default Search;
